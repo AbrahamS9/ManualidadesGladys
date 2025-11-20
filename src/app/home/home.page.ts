@@ -1,0 +1,21 @@
+import { Component } from '@angular/core';
+import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent],
+})
+export class HomePage {
+  constructor() {}
+
+ message: string | null=null;
+
+ showMessage(){
+  this.message = "¡Felicidades! Has creado tu primera app con ionic";
+ }
+
+
+ 
+}

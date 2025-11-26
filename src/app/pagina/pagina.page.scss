@@ -1,0 +1,32 @@
+//segundo card
+
+.card2 {
+  width: 100%;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(238, 241, 4, 0.884);
+}
+
+.img{
+    width: 100px auto;
+    height: 200px;
+    border-radius: auto;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.carg {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 10px;
+}

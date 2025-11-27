@@ -7,7 +7,16 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'pagina',
     pathMatch: 'full',
   },
+  {
+    path: 'pagina',
+    loadComponent: () => import('./pagina/pagina.page').then( m => m.PaginaPage)
+  },
+  {
+    path: 'vermas',
+    loadComponent: () => import('./pagina/vermas/vermas.page').then( m => m.VermasPage)
+  },
+  
 ];

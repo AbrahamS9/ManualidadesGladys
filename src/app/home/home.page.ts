@@ -1,5 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +7,7 @@ import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/stan
   styleUrls: ['home.page.scss'],
   imports: 
   [IonHeader, IonToolbar, 
-    IonTitle, IonContent],
+    IonTitle, IonContent, IonCard],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
 

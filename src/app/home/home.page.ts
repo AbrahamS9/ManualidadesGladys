@@ -1,5 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +7,7 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard } from '@ionic/ang
   styleUrls: ['home.page.scss'],
   imports: 
   [IonHeader, IonToolbar, 
-    IonTitle, IonContent, IonCard],
+    IonTitle, IonContent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
 
@@ -18,7 +18,7 @@ export class HomePage {
   message: string | null = null;
 
   showMessage() {
-    this.message = '¡Felicidades has creado tu primera app con ionic';
-  }
+    this.message = '¡Felicidades! Has creado tu primera app con ionic';
+  }
 
 }

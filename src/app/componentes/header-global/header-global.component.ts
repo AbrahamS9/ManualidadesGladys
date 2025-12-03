@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{ IonHeader, IonToolbar, IonTitle, IonButtons} from '@ionic/angular/standalone';
+import{ IonHeader, IonToolbar, IonTitle, IonButtons, IonButton} from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -8,7 +8,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   templateUrl: './header-global.component.html',
   styleUrls: ['./header-global.component.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, CommonModule, IonTitle, IonButtons]
+  imports: [IonHeader, IonToolbar, CommonModule, IonTitle, IonButtons, IonButton]
    ,schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HeaderGlobalComponent  implements OnInit {
@@ -22,6 +22,6 @@ export class HeaderGlobalComponent  implements OnInit {
   ngOnInit() {}
   
   irprincipal(){
-    this.router.navigate(['/principal']);
+    this.router.navigateByUrl('/principal');
   }
 }

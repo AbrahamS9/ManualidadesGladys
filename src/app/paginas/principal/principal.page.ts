@@ -86,6 +86,76 @@ export class PrincipalPage implements OnInit {
           descripcion:"Camisetas personalizadas de calidad",
           imagen:"assets/img/camisasp.jpg"
         },
+        {
+          id: 11,
+          titulo: "venta de utiles escolares",
+          precio:150,
+          descripcion:"Mandamos a domicilio tus utiles escolares",
+          imagen:"assets/img/utiles.jpeg"
+        },
+        {
+          id: 12,
+          titulo: "Trabajos de investigacion",
+          precio:150,
+          descripcion:"Trabajos de investigacion en cualquier area",
+          imagen:"assets/img/trabajos inves.webp"
+        },
+        {
+          id: 13,
+          titulo: "Copias e impresiones",
+          precio:150,
+          descripcion:"Copias e impresiones de calidad",
+          imagen:"assets/img/copiasei.jpeg"
+        },
+        {
+          id: 14,
+          titulo: "Carteles personalizadas",
+          precio:150,
+          descripcion:"Carteles personalizados para cualquier ocasion",
+          imagen:"assets/img/carteles.jpg"
+        },
+        {
+          id: 15,
+          titulo: "Caratulas para cuadernos",
+          precio:150,
+          descripcion:"Caratulas personalizadas para cuadernos",
+          imagen:"assets/img/caratulas.jpg"
+        },
+        {
+          id: 16,
+          titulo: "edicion de imagenes",
+          precio:150,
+          descripcion:"edicion de imagenes de calidad",
+          imagen:"assets/img/edicion.jpg"
+        },
+        {
+          id: 17,
+          titulo: "edicion de videos",
+          precio:150,
+          descripcion:"edicion de videos de calidad",
+          imagen:"assets/img/videos.jpg"
+        },
+        {
+          id: 18,
+          titulo: "pulseras personalizadas",
+          precio:150,
+          descripcion:"pu6lseras de cualquier material",
+          imagen:"assets/img/pulseras.jpeg"
+        },
+        {
+          id: 19,
+          titulo: "fofuchas personalizadas",
+          precio:150,
+          descripcion:"fofuchas para cualquier celebracion",
+          imagen:"assets/img/fofuchas.jpg"
+        },
+        {
+          id: 20,
+          titulo: "esferas personalizadas",
+          precio:150,
+          descripcion:"Personalizamos esferas para cualquier ocasion",
+          imagen:"assets/img/esferas.jpeg"
+        },
       ] 
    
       productosfiltrados = [...this.productos ];

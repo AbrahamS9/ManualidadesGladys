@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
-import { HeaderGlobalComponent } from 'src/app/componentes/header-global/header-global.component';
 import { FooterGlobalComponent } from 'src/app/componentes/footer-global/footer-global.component';
 
 @Component({
@@ -11,7 +10,7 @@ import { FooterGlobalComponent } from 'src/app/componentes/footer-global/footer-
   templateUrl: './principal.page.html',
   styleUrls: ['./principal.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FooterGlobalComponent,FormsModule, HeaderGlobalComponent]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FooterGlobalComponent,FormsModule]
   ,schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class PrincipalPage implements OnInit {

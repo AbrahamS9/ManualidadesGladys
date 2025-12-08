@@ -1,16 +1,19 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent} from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 import { FooterGlobalComponent } from 'src/app/componentes/footer-global/footer-global.component';
+import { MasComponent } from 'src/app/componentes/mas/mas.component';
+import {ModalController}from '@ionic/angular/standalone';
+import { HeaderGlobalComponent } from 'src/app/componentes/header-global/header-global.component';
 
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.page.html',
   styleUrls: ['./principal.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FooterGlobalComponent,FormsModule]
+  imports: [IonContent, CommonModule, FooterGlobalComponent,FormsModule, HeaderGlobalComponent]
   ,schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class PrincipalPage implements OnInit {
@@ -160,7 +163,9 @@ export class PrincipalPage implements OnInit {
       productosfiltrados = [...this.productos ];
    
       constructor(
-    private router: Router
+    private router: Router,
+    private modalCtrl: ModalController,
+
   ) { }
 
   ngOnInit() {
@@ -183,5 +188,16 @@ export class PrincipalPage implements OnInit {
       p => p.titulo.toLowerCase().includes(texto)|| 
       p.descripcion.toLowerCase().includes(texto)|| 
       p.precio.toString().includes(texto));
+   }
+
+   async verimagengrande(producto: any){
+    const modal = await this.modalCtrl.create({
+
+      component: MasComponent,
+      componentProps:{imagen: producto.imagen,
+        titulo: producto.titulo},
+        cssClass: 'estilo-modal'
+    });
+   await modal.present();
    }
   }

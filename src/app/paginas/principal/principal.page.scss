@@ -35,3 +35,17 @@ h1, h2 {
     gap: 20px;
     padding: 10px;
 }
+ion-content {
+   --background: url('/assets/img/fondoxd.png') no-repeat center/cover;
+}
+
+ion-header {
+   --background: linear-gradient(135deg, rgba(133, 51, 51, 0.452), rgba(243, 167, 167, 0.705));
+}
+
+ion-toolbar {
+   --background: url('/assets/img/fondoxd.png') no-repeat center/cover;
+}
+
+ion-searchbar {
+--background: url('/assets/img/fondoxd.png') no-repeat center/cover;}

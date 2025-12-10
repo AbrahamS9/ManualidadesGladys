@@ -7,170 +7,50 @@ import { FooterGlobalComponent } from 'src/app/componentes/footer-global/footer-
 import { MasComponent } from 'src/app/componentes/mas/mas.component';
 import {ModalController}from '@ionic/angular/standalone';
 import { HeaderGlobalComponent } from 'src/app/componentes/header-global/header-global.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.page.html',
   styleUrls: ['./principal.page.scss'],
   standalone: true,
-  imports: [IonContent, CommonModule, FooterGlobalComponent,FormsModule, HeaderGlobalComponent]
+  imports: [HttpClientModule, IonContent, CommonModule, FooterGlobalComponent,FormsModule, HeaderGlobalComponent]
   ,schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class PrincipalPage implements OnInit {
-   productos = [
-        {
-          id: 1,
-          titulo: "Maquetas",
-          precio:150,
-          descripcion:"Maquetas de calidad sobre cualquier tema",
-          imagen:"assets/img/maqueta.png"
-        },
-        {
-          id: 2,
-          titulo: "Portafolios",
-          precio:150,
-          descripcion:"Portafolios personalizados de calidad en cualquier material",
-          imagen:"assets/img/pt.jpg"
-        },
-        {
-          id: 3,
-          titulo: "trabajos manuales",
-          precio:150,
-          descripcion:"trabajos manuales sobre cualquier actividad",
-          imagen:"assets/img/mn.jpg"
-        },
-        {
-          id: 4,
-          titulo: "Pancartas",
-          precio:150,
-          descripcion:"pancartas personalizadas de calidad",
-          imagen:"assets/img/pancarta.jpeg"
-        },
-        {
-          id: 5,
-          titulo: "disfraces",
-          precio:150,
-          descripcion:"difraces de calidad para todas las edades",
-          imagen:"assets/img/disfraces.webp"
-        },
-        {
-          id: 6,
-          titulo: "decoraciones de fiestas",
-          precio:150,
-          descripcion:"decoraciones de fiesta para cualquier evento",
-          imagen:"assets/img/decof.webp"
-        },
-        {
-          id: 7,
-          titulo: "Piñatas personalizadas",
-          precio:150,
-          descripcion:"Piñatas personalizadas de calidad",
-          imagen:"assets/img/piñatas.webp"
-        },
-        {
-          id: 8,
-          titulo: "sorpresas personalizadas",
-          precio:150,
-          descripcion:"sorpresas personalizadas para cualquier ocasion",
-          imagen:"assets/img/sorpresas.jpg"
-        },
-        {
-          id: 9,
-          titulo: "Gorras personalizadas",
-          precio:150,
-          descripcion:"Gorras personalizadas de calidad",
-          imagen:"assets/img/gorrasp.webp"
-        },
-        {
-          id: 10,
-          titulo: "Camisetas personalizadas",
-          precio:150,
-          descripcion:"Camisetas personalizadas de calidad",
-          imagen:"assets/img/camisasp.jpg"
-        },
-        {
-          id: 11,
-          titulo: "venta de utiles escolares",
-          precio:150,
-          descripcion:"Mandamos a domicilio tus utiles escolares",
-          imagen:"assets/img/utiles.jpeg"
-        },
-        {
-          id: 12,
-          titulo: "Trabajos de investigacion",
-          precio:150,
-          descripcion:"Trabajos de investigacion en cualquier area",
-          imagen:"assets/img/trabajos inves.webp"
-        },
-        {
-          id: 13,
-          titulo: "Copias e impresiones",
-          precio:150,
-          descripcion:"Copias e impresiones de calidad",
-          imagen:"assets/img/copiasei.jpeg"
-        },
-        {
-          id: 14,
-          titulo: "Carteles personalizadas",
-          precio:150,
-          descripcion:"Carteles personalizados para cualquier ocasion",
-          imagen:"assets/img/carteles.jpg"
-        },
-        {
-          id: 15,
-          titulo: "Caratulas para cuadernos",
-          precio:150,
-          descripcion:"Caratulas personalizadas para cuadernos",
-          imagen:"assets/img/caratulas.jpg"
-        },
-        {
-          id: 16,
-          titulo: "edicion de imagenes",
-          precio:150,
-          descripcion:"edicion de imagenes de calidad",
-          imagen:"assets/img/edicion.jpg"
-        },
-        {
-          id: 17,
-          titulo: "edicion de videos",
-          precio:150,
-          descripcion:"edicion de videos de calidad",
-          imagen:"assets/img/videos.jpg"
-        },
-        {
-          id: 18,
-          titulo: "pulseras personalizadas",
-          precio:150,
-          descripcion:"pu6lseras de cualquier material",
-          imagen:"assets/img/pulseras.jpeg"
-        },
-        {
-          id: 19,
-          titulo: "fofuchas personalizadas",
-          precio:150,
-          descripcion:"fofuchas para cualquier celebracion",
-          imagen:"assets/img/fofuchas.jpg"
-        },
-        {
-          id: 20,
-          titulo: "esferas personalizadas",
-          precio:150,
-          descripcion:"Personalizamos esferas para cualquier ocasion",
-          imagen:"assets/img/esferas.jpeg"
-        },
-      ] 
-   
-      productosfiltrados = [...this.productos ];
+ 
+  productos: any[]=[];
+      productosfiltrados: any[]=[];
+      categorias: any[]=[];
+
    
       constructor(
-    private router: Router,
+    private router: Router, 
     private modalCtrl: ModalController,
+    private http: HttpClient,
 
   ) { }
 
   ngOnInit() {
+    this.cargarProductos();
+    this.cargarCategorias();
   }
+cargarCategorias(){
+    this.http.get('assets/bd/categorias.json')
+    .subscribe((data:any) => {this.categorias = data;});
+  
+}
 
+filtrarPorCategoria(nombre: string){
+  this.productosfiltrados 
+  = this.productos.filter(p =>p.subcategoria === nombre);
+}
+  cargarProductos(){
+    this.http.get('assets/bd/productos.json')
+    .subscribe((data:any) => {this.productos = data;
+    this.productosfiltrados = [...this.productos ];
+    });
+  }
 
   irvermas(producto: any){
     this.router.navigate(['/vermas'],  { queryParams:  producto });

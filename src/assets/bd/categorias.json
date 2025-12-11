@@ -1,31 +1,31 @@
 [
     {
-        "categoria": "Maquetas",
-        "subcategoria": [
+        "categorias": "Maquetas",
+        "subcategorias": [
             "Maquetas escolares",
             "Maquetas arquitectonicas",
             "Maquetas historicas"
         ]
     },
      {
-        "categoria": "Portafolios",
-        "subcategoria": [
+        "categorias": "Portafolios",
+        "subcategorias": [
             "Portafolios escolares",
             "Portafolios empresariales",
             "Portafolios artistiscos"
         ]
     },
      {
-        "categoria": "trabajos manuales",
-        "subcategoria": [
+        "categorias": "trabajos manuales",
+        "subcategorias": [
             "trabajos manuales escolares",
             "trabajos manuales decorativos",
             "trabajos manuales empresariales"
         ]
     },
      {
-        "categoria": "Pancartas",
-        "subcategoria": [
+        "categorias": "Pancartas",
+        "subcategorias": [
             "Pancartas escolares",
             "Pancartas publicitarias",
             "Pancartas decorativas" 

@@ -3,7 +3,7 @@
 .card2 {
    width: 100%;
    //margin: 30px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(243, 133, 206, 0.973);
 }
 
@@ -45,3 +45,65 @@ ion-toolbar {
 
 ion-searchbar {
 --background: url('/assets/img/fondoxd.png') no-repeat center/cover;}
+
+.categorias {
+   --background: url('/assets/img/fondoxd.png') no-repeat center/cover;
+  border-bottom: 1px solid #e2323200;
+  padding: 8px 0;
+}
+
+.menu-horizontal {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-horizontal .item {
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 6px 12px;
+  color: #ffffff;
+  transition: color .2s;
+}
+
+.menu-horizontal .item:hover {
+  color: #000000;
+}
+
+/* SUBMENÚ */
+.submenu {
+  list-style: none;
+  position: absolute;
+  top: 32px;
+  left: 0;
+  background: #fff;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 180px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all .25s ease;
+  z-index: 999;
+}
+
+.item:hover .submenu {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.submenu li {
+  padding: 8px 15px;
+  cursor: pointer;
+  color: #444;
+}
+
+.submenu li:hover {
+  --background: url('/assets/img/fondoxd.png') no-repeat center/cover;
+}

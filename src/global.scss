@@ -42,3 +42,6 @@
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
 } 
+ion-toolbar, ion-header {
+  --background: url('/assets/img/fondoxd.png') no-repeat center/cover;
+}

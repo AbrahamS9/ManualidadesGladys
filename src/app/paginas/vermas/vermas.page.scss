@@ -22,3 +22,13 @@
      padding: 10px;
      box-shadow: 0px 8px 20px rgba(238, 156, 218, 0.979);
 }
+ion-content {
+   --background: url('/assets/img/fondoxd.png') no-repeat center/cover;
+}
+
+ion-header:nth-of-type(2) ion-toolbar::part(background) {
+  background: url('/assets/img/fondoxd.png') no-repeat center/cover !important;
+}
+
+
+

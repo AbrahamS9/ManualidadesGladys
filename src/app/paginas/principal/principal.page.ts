@@ -41,7 +41,7 @@ cargarCategorias(){
   
 }
 
-filtrarPorCategoria(nombre: string){
+filtrarPorSubcategoria(nombre: string){
   this.productosfiltrados 
   = this.productos.filter(p =>p.subcategoria === nombre);
 }

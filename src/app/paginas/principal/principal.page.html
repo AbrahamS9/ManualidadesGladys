@@ -9,18 +9,18 @@
 
 <ion-content [fullscreen]="true">
 
-  <nav class="categorias">
-  <ul class="menu horizontal">
-    <li class="item" *ngFor="Let cat of categorias">
+  <nav class="categorias" >
+   <ul class="menu-horizontal">
+    <li class="item"  *ngFor="let cat of categorias">
       {{cat.categorias}}
-      <ul class="submenu">
-        <li *ngFor="Let sub of cat.subcategorias" 
-        (click)="FiltrarPorSubcategoria(sub)">
+       <ul class="submenu">
+        <li *ngFor="let sub of cat.subcategorias"
+         (click)="filtrarPorSubcategoria(sub)">
           {{sub}}
         </li>
-      </ul>
+       </ul>
     </li>
-  </ul>
+   </ul>
   </nav>
 
    <ion-searchbar placeholder="buscar productos" (ionInput)="filtrar($event)"> 

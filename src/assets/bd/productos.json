@@ -4,13 +4,10 @@
           "titulo": "Maquetas",
           "precio":150,
           "descripcion":"Maquetas de calidad sobre cualquier tema",
-          "imagen":"assets/img/maqueta.png"
-        "categoria":"Maquetas",
-        "subcategoria":[
-            "Maquetas escolares",
-            "Maquetas arquitectonicas",
-            "Maquetas historicas"
-        ]
+          "imagen":"assets/img/maqueta.png",
+          "categorias":"Maquetas",
+          "subcategorias":"Maquetas escolares"
+     
 
         },
         {
@@ -18,22 +15,27 @@
           "titulo": "Portafolios",
           "precio":150,
           "descripcion":"Portafolios personalizados de calidad en cualquier material",
-          "imagen":"assets/img/pt.jpg"
-
+          "imagen":"assets/img/pt.jpg",
+           "categorias":"¨Portafolios",
+          "subcategorias":"Portafolios empresariales"
         },
         {
           "id": 3,
           "titulo": "trabajos manuales",
           "precio":150,
           "descripcion":"trabajos manuales sobre cualquier actividad",
-          "imagen":"assets/img/mn.jpg"
+          "imagen":"assets/img/mn.jpg",
+          "categorias":"Trabajos manuales",
+          "subcategorias":"Trabajos manuales decorativos"
         },
         {
           "id": 4,
           "titulo": "Pancartas",
           "precio":150,
           "descripcion":"pancartas personalizadas de calidad",
-          "imagen":"assets/img/pancarta.jpeg"
+          "imagen":"assets/img/pancarta.jpeg",
+          "categorias":"Pancartas",
+          "subcategorias":"Pancartas escolares"
         },
         {
           "id": 5,

@@ -80,4 +80,20 @@ filtrarPorSubcategoria(nombre: string){
     });
    await modal.present();
    }
+   imagenesCarrusel = [
+  'assets/img/banner.png',
+  'assets/img/banner2.png',
+   'assets/img/banner3.png',
+  
+];
+
+slideOpts = {
+  initialSlide: 0,
+  speed: 600,
+  autoplay: {
+    delay: 3000
+  },
+  loop: true
+};
   }
+  

@@ -7,6 +7,7 @@
 
 
 
+
 <ion-content [fullscreen]="true">
 
   <nav class="categorias" >
@@ -26,6 +27,21 @@
    <ion-searchbar placeholder="buscar productos" (ionInput)="filtrar($event)"> 
        
    </ion-searchbar>
+<swiper-container
+  pagination="true"
+  autoplay-delay="3000"
+  loop="true"
+  class="swiper-banner"
+  breakpoints='{
+    "1920":  { "slidesPerView": 1 },
+    "600": { "slidesPerView": 1 },
+    "992": { "slidesPerView": 1 }
+  }'
+>
+  <swiper-slide *ngFor="let img of imagenesCarrusel">
+    <img [src]="img" class="img-carousel" />
+  </swiper-slide>
+</swiper-container>
 
 <div   class="carg" >
   <ion-card  class="card2"  *ngFor="let p of productosfiltrados">
